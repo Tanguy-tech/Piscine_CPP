@@ -6,7 +6,7 @@
 #    By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/15 09:10:05 by Tanguy            #+#    #+#              #
-#    Updated: 2021/12/15 09:10:12 by Tanguy           ###   ########.fr        #
+#    Updated: 2021/12/15 11:55:54 by Tanguy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,3 +23,11 @@ BOLD        =   \033[1m
 UNDER       =   \033[4m
 SUR         =   \033[7m
 END         =   \033[0m
+
+NAME = MyPhoneBook
+
+RM	= rm -rf
+
+CC = clang++
+
+FLAGS = -Wall -Werror -Wextra
