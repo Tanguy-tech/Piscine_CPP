@@ -6,7 +6,7 @@
 #    By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/15 09:10:05 by Tanguy            #+#    #+#              #
-#    Updated: 2021/12/15 11:55:54 by Tanguy           ###   ########.fr        #
+#    Updated: 2021/12/16 10:16:24 by Tanguy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,3 +31,27 @@ RM	= rm -rf
 CC = clang++
 
 FLAGS = -Wall -Werror -Wextra
+
+SRCS = contact.cpp main.cpp phonebook.cpp
+
+INCS = contact.class.hpp phonebook.class.hpp
+
+OBJS = $(SRCS:.cpp=.o)
+
+$(NAME):	$(OBJS)
+			$(CC) $(FLAGS) $(OBJS) -o $(NAME)
+
+all:	$(NAME)
+
+%.o:%.cpp	$(INCS)
+			$(CC) $(FLAGS) -c $< -o $@
+
+clean:
+		@$(RM) *.o
+		@printf "$(ERASE)$(RED)-> All files *.o cleaned$(END)\n"
+
+fclean:	clean
+		@$(RM) MyPhoneBook
+		@printf "$(ERASE)$(RED)-> Executable MyPhoneBook cleaned$(END)\n"
+
+re: fclean all

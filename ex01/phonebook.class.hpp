@@ -6,7 +6,7 @@
 /*   By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 09:43:45 by Tanguy            #+#    #+#             */
-/*   Updated: 2021/12/15 11:58:38 by Tanguy           ###   ########.fr       */
+/*   Updated: 2021/12/16 09:49:44 by Tanguy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class PhoneBook
 
         int     count(void) const;
         Contact fetchContact(int i) const;
-        void    PhoneBook::addContact(Contact new_contact);
+        void    addContact(Contact new_contact);
         void    display(void) const;
     
     private:
