@@ -6,7 +6,7 @@
 /*   By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 11:24:00 by Tanguy            #+#    #+#             */
-/*   Updated: 2021/12/15 11:58:40 by Tanguy           ###   ########.fr       */
+/*   Updated: 2021/12/16 10:26:34 by Tanguy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,16 @@ void    PhoneBook::display(void) const
 {
     std::cout << "Index   |";
     std::cout << "First Name   |";
-    std::cout << "Last Name   " << std::endl;
-    std::cout << "-----------------------------------" << std::endl;
+    std::cout << "Last Name   |" << std::endl;
+    std::cout << "Nickname" << std::endl;
+    std::cout << "-------------------------------------------" << std::endl;
 
     for (int i = 0; i < this->_count; i++)
     {
         Contact c = this->_contacts[i];
         std::cout << i;
         std::cout << c.fetchDataField(0);
-        std::cout << c.fetchDataField(1) << std::endl;
+        std::cout << c.fetchDataField(1);
+        std::cout << c.fetchDataField(2) << std::endl;
     }
 }
