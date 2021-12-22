@@ -6,7 +6,7 @@
 /*   By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 09:27:03 by Tanguy            #+#    #+#             */
-/*   Updated: 2021/12/15 11:43:30 by Tanguy           ###   ########.fr       */
+/*   Updated: 2021/12/22 17:23:14 by Tanguy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,6 @@ void    Contact::input(void)
 
 void    Contact::display(void) const /* Display current contact */
 {
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < 5; i++)
         std::cout << "- " << Contact::_fieldNames[i] << ": " << this->_fields[i] << std::endl;
 }

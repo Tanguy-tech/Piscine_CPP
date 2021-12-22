@@ -6,11 +6,12 @@
 /*   By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 11:24:00 by Tanguy            #+#    #+#             */
-/*   Updated: 2021/12/16 10:26:34 by Tanguy           ###   ########.fr       */
+/*   Updated: 2021/12/16 11:54:53 by Tanguy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <iomanip>
 #include "phonebook.class.hpp"
 
 PhoneBook::PhoneBook(void) : _count(0) {} /* Initialize count to 0 */
@@ -28,23 +29,43 @@ Contact PhoneBook::fetchContact(int i) const
 
 void    PhoneBook::addContact(Contact new_contact)
 {
-    this->_contacts[this->_count += 1] = new_contact;
+    this->_contacts[this->_count++] = new_contact;
+}
+
+void    setdisplay(std::string field)
+{
+    if (field.size() > 10)
+		std::cout << std::setw(9) << field.substr(0, 9) << ".";
+	else
+		std::cout << std::setw(10) << std::right << std::setfill(' ') << field;
+
+	std::cout << '|';
 }
 
 void    PhoneBook::display(void) const
 {
-    std::cout << "Index   |";
-    std::cout << "First Name   |";
-    std::cout << "Last Name   |" << std::endl;
-    std::cout << "Nickname" << std::endl;
-    std::cout << "-------------------------------------------" << std::endl;
+    setdisplay("index");
+    setdisplay("first name");
+    setdisplay("last name");
+    setdisplay("nickname");
+    std::cout << std::endl << "--------------------------------------------" << std::endl;
 
-    for (int i = 0; i < this->_count; i++)
+    if (this->_count)
     {
-        Contact c = this->_contacts[i];
-        std::cout << i;
-        std::cout << c.fetchDataField(0);
-        std::cout << c.fetchDataField(1);
-        std::cout << c.fetchDataField(2) << std::endl;
+        for (int i = 0; i < this->_count; i++)
+        {
+            Contact c = this->_contacts[i];
+            setdisplay(std::to_string(i));
+            setdisplay(c.fetchDataField(0));
+            setdisplay(c.fetchDataField(1));
+            setdisplay(c.fetchDataField(2));
+            std::cout << std::endl;
+        }
     }
+    else
+    {
+        std::cout << "   Your PhoneBook is empty at the moment!" << std::endl;
+        std::cout << "     Use command [ADD] to add a contact" << std::endl;
+    }
+    std::cout << std::endl;
 }
