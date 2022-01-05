@@ -6,7 +6,7 @@
 /*   By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 09:27:03 by Tanguy            #+#    #+#             */
-/*   Updated: 2021/12/22 17:23:14 by Tanguy           ###   ########.fr       */
+/*   Updated: 2022/01/05 09:51:04 by Tanguy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,12 @@ void    Contact::input(void)
         std::string value;
         std::cout << Contact::_fieldNames[i] << ": ";
         std::getline(std::cin, value);
-        if (value.compare("") == 0)
+        while (value.compare("") == 0)
+        {
             std::cout << "ERROR! field cannot be empty!" << std::endl;
+            std::cout << Contact::_fieldNames[i] << ": ";
+            std::getline(std::cin, value);
+        }
         this->setDataField(i, value);
     }
 }
