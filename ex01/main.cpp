@@ -6,7 +6,7 @@
 /*   By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/15 09:34:32 by Tanguy            #+#    #+#             */
-/*   Updated: 2022/01/05 09:47:32 by Tanguy           ###   ########.fr       */
+/*   Updated: 2022/01/05 09:54:31 by Tanguy           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ int main(void)
                     index = atoi(input.c_str());
                     if ((index >= 0 && index < pb.count()) || index == 8)
                         break;
-                    std::cout << "ERROR! you must enter an integer between 0 and 7 as the phonebook can only contain 8 contacts." << std::endl;
+                    std::cout << "ERROR! you must enter a valid index! Remember, the phonebook can only contain 8 contacts." << std::endl;
                 }
                 if (index != 8)
                     pb.fetchContact(index).display();
