@@ -6,7 +6,7 @@
 #    By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/05 09:58:40 by Tanguy            #+#    #+#              #
-#    Updated: 2022/01/05 10:04:53 by Tanguy           ###   ########.fr        #
+#    Updated: 2022/01/24 14:20:32 by Tanguy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,7 +51,7 @@ clean:
 		@printf "$(ERASE)$(RED)-> All files *.o cleaned$(END)\n"
 
 fclean:	clean
-		@$(RM) MyPhoneBook
+		@$(RM) Account
 		@printf "$(ERASE)$(RED)-> Executable cleaned$(END)\n"
 
 re: fclean all
