@@ -6,7 +6,7 @@
 #    By: Tanguy <Tanguy@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/14 11:03:34 by Tanguy            #+#    #+#              #
-#    Updated: 2021/12/14 11:13:13 by Tanguy           ###   ########.fr        #
+#    Updated: 2022/01/24 13:48:31 by Tanguy           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,8 +42,8 @@ $(NAME):	$(OBJS)
 all:	$(NAME)
 
 clean:
-		$(RM) *.o
-		printf "$(ERASE)$(RED)-> All files *.o cleaned$(END)\n"
+		@$(RM) *.o
+		@printf "$(ERASE)$(RED)-> All files *.o cleaned$(END)\n"
 
 fclean:	clean
 		@$(RM) megaphone
