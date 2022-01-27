@@ -6,7 +6,7 @@
 #    By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/26 09:50:33 by tbillon           #+#    #+#              #
-#    Updated: 2022/01/26 09:50:51 by tbillon          ###   ########.fr        #
+#    Updated: 2022/01/27 14:34:01 by tbillon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ NAME = karenFilter
 
 RM	= rm -rf
 
-CC = clang++
+CC = clang++ -std=c++98
 
 FLAGS = -Wall -Werror -Wextra
 

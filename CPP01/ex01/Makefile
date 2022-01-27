@@ -6,7 +6,7 @@
 #    By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/24 16:42:59 by tbillon           #+#    #+#              #
-#    Updated: 2022/01/24 16:43:24 by tbillon          ###   ########.fr        #
+#    Updated: 2022/01/27 14:35:34 by tbillon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ NAME = Zombie
 
 RM	= rm -rf
 
-CC = clang++
+CC = clang++ -std=c++98
 
 FLAGS = -Wall -Werror -Wextra
 

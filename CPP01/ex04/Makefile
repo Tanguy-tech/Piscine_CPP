@@ -6,7 +6,7 @@
 #    By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/25 14:59:23 by tbillon           #+#    #+#              #
-#    Updated: 2022/01/25 16:22:17 by tbillon          ###   ########.fr        #
+#    Updated: 2022/01/27 14:35:10 by tbillon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ NAME = replace
 
 RM	= rm -rf
 
-CC = clang++
+CC = clang++ -std=c++98
 
 FLAGS = -Wall -Werror -Wextra
 

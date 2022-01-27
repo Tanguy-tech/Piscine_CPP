@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/01/25 16:21:17 by tbillon           #+#    #+#              #
-#    Updated: 2022/01/27 14:35:03 by tbillon          ###   ########.fr        #
+#    Created: 2022/01/27 14:08:24 by tbillon           #+#    #+#              #
+#    Updated: 2022/01/27 14:33:38 by tbillon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ UNDER       =   \033[4m
 SUR         =   \033[7m
 END         =   \033[0m
 
-NAME = karen
+NAME = Fixed
 
 RM	= rm -rf
 
@@ -31,9 +31,9 @@ CC = clang++ -std=c++98
 
 FLAGS = -Wall -Werror -Wextra
 
-SRCS = Karen.cpp main.cpp
+SRCS = Fixed.cpp main.cpp
 
-INCS = Karen.hpp
+INCS = Fixed.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 
@@ -50,7 +50,7 @@ clean:
 		@printf "$(ERASE)$(RED)-> All files *.o cleaned$(END)\n"
 
 fclean:	clean
-		@$(RM) karen
+		@$(RM) Fixed
 		@printf "$(ERASE)$(RED)-> Executable cleaned$(END)\n"
 
 re: fclean all
