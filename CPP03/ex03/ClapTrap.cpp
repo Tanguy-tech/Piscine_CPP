@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/31 10:31:47 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/01 15:27:01 by tbillon          ###   ########.fr       */
+/*   Created: 2022/02/01 15:30:36 by tbillon           #+#    #+#             */
+/*   Updated: 2022/02/01 15:30:37 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ ClapTrap::ClapTrap()
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _HitPoints(10), _EnergyPoints(10), _AttackDamage(0)
 {
-	std::cout << "Default constructor with name parameter called" << std::endl;
+	std::cout << "ClapTrap Default constructor with name parameter called" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &cpy)
@@ -54,14 +54,29 @@ int	ClapTrap::getDamage(void) const
 	return this->_AttackDamage;
 }
 
+void ClapTrap::setEnergyPoints(unsigned int amount)
+{
+	this->_EnergyPoints = amount;
+}
+
 int	ClapTrap::getEnergyPoints(void) const
 {
 	return this->_EnergyPoints;
 }
 
+void	ClapTrap::setHitPoints(unsigned int amount)
+{
+	this->_HitPoints = amount;
+}
+
 int	ClapTrap::getHitPoints(void) const
 {
 	return this->_HitPoints;
+}
+
+void ClapTrap::setName(std::string name)
+{
+	this->_name = name;
 }
 
 std::string	ClapTrap::getName(void) const

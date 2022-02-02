@@ -6,7 +6,7 @@
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:47:08 by tbillon           #+#    #+#             */
-/*   Updated: 2022/01/31 15:30:25 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/01 15:00:27 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ class ClapTrap
 {
     public:
         ClapTrap();
-        ClapTrap(const ClapTrap &cpy);
         ClapTrap(std::string name);
+        ClapTrap(const ClapTrap &cpy);
         ClapTrap & operator=(ClapTrap const &rhs);
         ~ClapTrap();
 
@@ -39,13 +39,13 @@ class ClapTrap
         int getHitPoints(void) const;
         int getEnergyPoints(void) const;
 
+        void displayStatus(void);
+
     private:
         std::string _name;
         int         _HitPoints;
         int         _EnergyPoints;
         int         _AttackDamage;
 };
-
-void displayStatus(ClapTrap player);
 
 #endif
