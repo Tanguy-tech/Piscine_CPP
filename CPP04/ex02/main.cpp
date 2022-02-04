@@ -6,7 +6,7 @@
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 10:48:48 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/04 13:28:28 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/04 13:37:22 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 int main()
 {
-    Animal* meta[TAB_SIZE];
+    AAnimal* meta[TAB_SIZE];
 
     for (int i = 0; i < TAB_SIZE; i++)
     {
