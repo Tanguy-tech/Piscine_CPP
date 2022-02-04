@@ -6,7 +6,7 @@
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:47:16 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/01 15:34:29 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/04 10:13:39 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,11 @@ class ScavTrap : public ClapTrap
 
         void guardGate(void) const;
 		void attack(std::string const &target);
-        
-    private:
+
+    protected:
+        static const unsigned int scav_HP = 100;
+        static const unsigned int scav_EP = 50;
+        static const unsigned int scav_AD = 30;
     
 };
 

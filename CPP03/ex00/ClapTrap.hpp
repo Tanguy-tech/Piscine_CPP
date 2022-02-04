@@ -6,7 +6,7 @@
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 10:11:01 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/01 15:00:07 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/03 17:14:21 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@ class ClapTrap
         void takeDamage(unsigned int amount);
         void beRepaired(unsigned int amount);
 
-        void setDamage(unsigned int amount);
         std::string getName(void) const;
-        int getDamage(void) const;
-        int getHitPoints(void) const;
-        int getEnergyPoints(void) const;
 
         void displayStatus(void);
+
+        static const unsigned int default_HP;
+        static const unsigned int default_EP;
+        static const unsigned int default_AD;
 
     private:
         std::string _name;

@@ -6,7 +6,7 @@
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 15:43:31 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/02 08:28:52 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/04 09:53:07 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,9 @@ class DiamondTrap : public FragTrap, public ScavTrap
         DiamondTrap & operator=(DiamondTrap const &rhs);
         ~DiamondTrap();
 
-        void attack(std::string target){ScavTrap::attack(target);};
+        using ScavTrap::attack;
         void whoAmI();
-
+        
     private:
         std::string _name;
 };

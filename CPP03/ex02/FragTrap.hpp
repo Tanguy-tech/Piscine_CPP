@@ -6,7 +6,7 @@
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 15:30:43 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/01 15:35:43 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/04 10:02:11 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,11 @@ class FragTrap : public ClapTrap
         ~FragTrap();
 
         void highFivesGuys(void);
+
+    protected:
+        static const unsigned int frag_HP = 100;
+        static const unsigned int frag_AD = 30;
+        static const unsigned int frag_EP = 100;
 
 };
 
