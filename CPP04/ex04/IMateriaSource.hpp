@@ -6,15 +6,14 @@
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 14:29:47 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/04 14:30:37 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/07 10:53:19 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef IMATERIA_SOURCE_HPP
 #define IMATERIA_SOURCE_HPP
 
-#include <string>
-#include <iostream>
+#include "AMateria.hpp"
 
 class IMateriaSource
 {

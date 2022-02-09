@@ -6,7 +6,7 @@
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 14:15:28 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/04 14:16:25 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/07 10:52:59 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 #include "AMateria.hpp"
 
+class AMateria;
 class ICharacter
 {
     public:

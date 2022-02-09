@@ -6,7 +6,7 @@
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 10:25:42 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/04 13:46:01 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/07 11:05:58 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,10 @@ class AAnimal
 
     protected:
         std::string type;
+
+    private:
+        AAnimal();
+        AAnimal(const AAnimal &cpy);
 };
 
 #endif
