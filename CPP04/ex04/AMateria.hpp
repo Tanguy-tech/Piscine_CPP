@@ -6,7 +6,7 @@
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 14:12:02 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/07 11:12:20 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/09 10:16:56 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class AMateria
 
         /* fonction virtuelle pure */
         virtual AMateria* clone() const = 0;
-        
+    
         virtual void use(ICharacter& target);
 
     protected:

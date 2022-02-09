@@ -6,7 +6,7 @@
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 14:30:40 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/04 14:32:43 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/09 10:04:46 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 #define MATERIA_SOURCE_HPP
 
 #include "IMateriaSource.hpp"
-#include "AMateria.hpp"
+
+#define MAX_MS 4
 
 class MateriaSource : public IMateriaSource
 {
@@ -29,7 +30,7 @@ class MateriaSource : public IMateriaSource
 		virtual AMateria* createMateria(std::string const & type);
         
     private:
-		AMateria* _materias[4];
+		AMateria* _materias[MAX_MS];
 };
 
 #endif

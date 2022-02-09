@@ -6,7 +6,7 @@
 #    By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/04 14:05:21 by tbillon           #+#    #+#              #
-#    Updated: 2022/02/04 14:06:36 by tbillon          ###   ########.fr        #
+#    Updated: 2022/02/09 10:13:16 by tbillon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,9 +31,9 @@ CC = clang++ -std=c++98
 
 FLAGS = -Wall -Werror -Wextra
 
-SRCS = AMateria.cpp main.cpp
+SRCS = AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp main.cpp
 
-INCS = AMateria.hpp
+INCS = AMateria.hpp Character.hpp Cure.hpp Ice.hpp ICharacter.hpp IMateriaSource.hpp MateriaSource.hpp
 
 OBJS = $(SRCS:.cpp=.o)
 

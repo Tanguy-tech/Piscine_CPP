@@ -6,7 +6,7 @@
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 14:16:45 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/04 14:24:27 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/09 09:50:12 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ class Cure : public AMateria
 {
     public:
         Cure();
-        Cure(const Cure &cpy);
-        Cure &operator=(Cure const &rhs);
         ~Cure();
 
-        virtual AMateria* clone() const = 0;
-        virtual void use(ICharacter& target);
+        virtual AMateria* clone() const;
+        void use(ICharacter& target);
 
     private:
         std::string _type;
+        Cure(const Cure &cpy);
+        Cure &operator=(Cure const &rhs);
 };
 
 #endif
