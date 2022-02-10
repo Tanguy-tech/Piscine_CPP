@@ -6,7 +6,7 @@
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 10:18:39 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/10 12:11:43 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/10 15:47:57 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int main(void)
 {
     Bureaucrat bernard; /* Initialisation par defaut */
     Bureaucrat jeanmarc("Jean-Marc", 2); /* Initialisation avec parametres et gestion d'erreurs */
+    Bureaucrat adrien("Adrien", 0); /* Ici le grade est trop haut  -> on renvoie une erreur */
     Bureaucrat anthony("", 2); /* Ici le nom est vide -> on renvoie une erreur et set le nom au nom par defaut défini */
 
     std::cout << std::endl;

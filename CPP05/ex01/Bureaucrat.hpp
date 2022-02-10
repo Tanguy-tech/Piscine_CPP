@@ -6,7 +6,7 @@
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 10:19:08 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/10 15:38:25 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/10 16:31:45 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@
 #define YELLOW  "\033[33m"
 #define BLUE    "\033[34m"
 
+class Form;
 
 class Bureaucrat
 {
@@ -86,6 +87,7 @@ class Bureaucrat
         int         getGrade() const;
         void        upGrade(int incr); /* decrement grade == --grade as 1 is highest grade and 150 the lowest */
         void        downGrade(int decr); /* decrement grade == ++grade as 1 is highest grade and 150 the lowest */
+        void        signForm(Form &form);
 
     private:
         std::string  _name;

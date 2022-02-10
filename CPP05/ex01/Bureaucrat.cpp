@@ -6,11 +6,12 @@
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 10:43:01 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/10 15:55:37 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/10 16:35:13 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat() : _name(DEFAULT_NAME), _grade(DEFAULT_GRADE)
 {
@@ -96,6 +97,17 @@ void    Bureaucrat::downGrade(int decr)
     }
     this->_grade += decr;
     std::cout << GREEN << this->_name << "'s grade has been decremented." << DEFAULT << std::endl; 
+}
+
+void    Bureaucrat::signForm(Form &form)
+{
+    if (form.getSignGrade() >= this->getGrade())
+	{
+		form.setSigned(true);
+		std::cout << BLUE << this->getName() << " signed " << form.getName() << DEFAULT << std::endl;
+	}
+	else
+		std::cout << YELLOW  << this->getName() << " couldn't sign " << form.getName() << " because his grade is lower than the form's grade needed to sign." << DEFAULT << std::endl;
 }
 
 std::ostream &operator<<(std::ostream &o, const Bureaucrat &bur) {
