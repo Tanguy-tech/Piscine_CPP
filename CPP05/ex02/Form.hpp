@@ -6,7 +6,7 @@
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 14:56:27 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/11 10:58:10 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/11 13:56:28 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 #define FG_TOO_LOW "Provided grade is too low to sign or execute this form."
 #define FG_TOO_HIGH "Provided grade is too High to sign or execute this form."
 #define BAD_FORM_NAME "Empty or incorrect form name imputed! Form name has been left empty."
+#define NOT_SIGNED "Form not signed! Unsigned forms can't be executed"
 #define RED     "\033[31m"
 #define GREEN   "\033[32m"
 #define DEFAULT "\033[0m"
@@ -60,12 +61,23 @@ class Form
                     return BAD_FORM_NAME;
                 }
         };
+        class FormNotSignedException: public std::exception
+        {
+            public:
+                const char* what() const throw()
+                {
+                    return NOT_SIGNED;
+                }
+        };
 
         bool        setSigned(bool is_signed);
-        void        beSigned(Bureaucrat &bur);
         std::string getName() const;
         int         getSignGrade() const;
         int         getExecGrade() const;
+        bool        getIsSigned() const;
+
+        virtual void    beSigned(Bureaucrat &bur);
+        virtual void    execute(Bureaucrat const &bur) const = 0;
 
     private:
         std::string const _name;

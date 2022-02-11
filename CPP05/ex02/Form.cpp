@@ -6,7 +6,7 @@
 /*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 15:04:06 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/11 08:46:46 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/11 09:10:50 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,11 @@ std::string Form::getName() const
 bool Form::setSigned(bool is_signed)
 {
     return this->_is_signed = is_signed;
+}
+
+bool Form::getIsSigned() const
+{
+    return _is_signed;
 }
 
 void Form::beSigned(Bureaucrat &bur)
