@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tanguy <tanguy@student.42.fr>              +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 11:31:51 by tanguy            #+#    #+#             */
-/*   Updated: 2022/02/13 11:58:41 by tanguy           ###   ########.fr       */
+/*   Updated: 2022/02/14 08:53:59 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,5 @@ int main(int ac, char **av)
             return -1;
         }
     }
-    retunr 0;
+    return 0;
 }
