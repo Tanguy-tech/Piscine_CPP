@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 08:23:55 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/11 14:01:51 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/22 14:44:14 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ class ShrubberyCreationForm : public Form
         ShrubberyCreationForm& operator=(const ShrubberyCreationForm &rhs);
         std::string const _target;
 };
+
+std::ostream & operator<<(std::ostream & o, ShrubberyCreationForm const & form);
 
 #endif

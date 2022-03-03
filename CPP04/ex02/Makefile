@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+         #
+#    By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/04 10:24:36 by tbillon           #+#    #+#              #
-#    Updated: 2022/02/04 13:35:59 by tbillon          ###   ########.fr        #
+#    Updated: 2022/02/21 15:10:06 by tbillon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ UNDER       =   \033[4m
 SUR         =   \033[7m
 END         =   \033[0m
 
-NAME = Brain
+NAME = AAnimal
 
 RM	= rm -rf
 
@@ -50,7 +50,7 @@ clean:
 		@printf "$(ERASE)$(RED)-> All files *.o cleaned$(END)\n"
 
 fclean:	clean
-		@$(RM) Brain
+		@$(RM) AAnimal
 		@printf "$(ERASE)$(RED)-> Executable cleaned$(END)\n"
 
 re: fclean all

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 10:42:02 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/04 13:37:03 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/21 15:03:08 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 Cat::Cat() : _brain(new Brain)
 {
     std::cout << "Cat default constructor called" << std::endl;
-    type = "Cat";
+    _type = "Cat";
 }
 
 Cat::Cat(const Cat &cpy)
 {
     std::cout << "Cat dcopy constructor called" << std::endl;
-    type = cpy.type;
+    _type = cpy._type;
     _brain = new Brain(*cpy._brain);
 }
 
@@ -30,7 +30,7 @@ Cat & Cat::operator=(Cat const &rhs)
     if (this != &rhs)
     {
         std::cout << "Cat assignation operator constructor called" << std::endl;
-        type = rhs.type;
+        _type = rhs._type;
         _brain = new Brain(*rhs._brain);
     }
     return *this;
@@ -44,7 +44,7 @@ Cat::~Cat()
 
 void Cat::makeSound() const
 {
-    std::cout << type << " say meow!" << std::endl;
+    std::cout << _type << " say meow!" << std::endl;
 }
 
 const std::string &Cat::getType() const

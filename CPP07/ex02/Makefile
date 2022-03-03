@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+         #
+#    By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/15 08:33:21 by tbillon           #+#    #+#              #
-#    Updated: 2022/02/15 09:03:49 by tbillon          ###   ########.fr        #
+#    Updated: 2022/02/24 15:36:34 by tbillon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ NAME = Array
 
 RM	= rm -rf
 
-CC = clang++ -std=c++98
+CC = c++ -std=c++98
 
 FLAGS = -Wall -Werror -Wextra
 

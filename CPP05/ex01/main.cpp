@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 10:18:39 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/10 16:33:59 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/22 14:30:44 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,10 @@ int main(void)
     std::cout << "Now let's try to make JeanMarc sign the obtentionAllocation Form." << std::endl;
     jeanmarc.signForm(obtentionAllocations);
     obtentionAllocations.beSigned(jeanmarc);
+    std::cout << std::endl;
+
+    std::cout << jeanmarc << std::endl; /* Surcharge operateur << */
+    std::cout << retraitPermis << std::endl; /* Surcharge operateur << */
     std::cout << std::endl;
 
     return 0;

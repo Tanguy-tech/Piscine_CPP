@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 10:46:27 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/04 12:17:29 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/21 15:46:05 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class Dog : public Animal
+class Dog : virtual public Animal
 {
     public:
         Dog();

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tanguy <tanguy@student.42.fr>              +#+  +:+       +#+         #
+#    By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/13 11:20:59 by tanguy            #+#    #+#              #
-#    Updated: 2022/02/13 11:21:23 by tanguy           ###   ########.fr        #
+#    Updated: 2022/02/24 13:13:22 by tbillon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ NAME = Convert
 
 RM	= rm -rf
 
-CC = clang++ -std=c++98
+CC = c++ -std=c++98
 
 FLAGS = -Wall -Werror -Wextra
 

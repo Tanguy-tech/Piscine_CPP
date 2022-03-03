@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Span.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 08:47:12 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/16 10:12:12 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/03/01 14:14:39 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,36 @@
 
 Span::Span(unsigned int N) : _N(N) {}
 
+Span::Span(const Span &cpy) : _N(cpy._N), _vect(std::vector<int>(cpy._vect)) {}
+
 Span::~Span() {}
 
 void    Span::addNumber(int newNb)
 {
     try {
-        if(this->_lst.size() >= _N)
+        if(_vect.size() >= _N)
             throw FullSpanExcepetion();
-        this->_lst.push_back(newNb);
+        _vect.push_back(newNb);
+    }
+    catch (const Span::FullSpanExcepetion &e)
+    {
+        std::cout << RED << e.what() << DEFAULT << std::endl;
+    }
+}
+
+void    Span::addMultipleRand(int nb_of_nb)
+{
+     try {
+        if(_vect.size() >= _N)
+            throw FullSpanExcepetion();
+        srand(time(NULL));
+        for (int i = 0; i < nb_of_nb; i++)
+        {
+            if(_vect.size() >= _N)
+                throw FullSpanExcepetion();
+            _vect.push_back(rand() % INT64_MAX);
+            std::cout << _vect.back() << std::endl;
+        }
     }
     catch (const Span::FullSpanExcepetion &e)
     {
@@ -32,11 +54,9 @@ void    Span::addNumber(int newNb)
 int Span::longestSpan()
 {
     try {
-        if (this->_lst.size() <= 1)
+        if (_vect.size() <= 1)
             throw NoSpanException();
-        int i = this->_lst.front();
-        int j = this->_lst.back() - i;
-        return (j);
+        return (*std::max_element(_vect.begin(), _vect.end()) - *std::min_element(_vect.begin(), _vect.end()));
     }
     catch (const Span::NoSpanException &e)
     {
@@ -47,17 +67,21 @@ int Span::longestSpan()
 
 int Span::shortestSpan()
 {
+    std::vector<int>  vect (_vect.begin(), _vect.end());
+    unsigned int dist;
     try {
-        std::list<int>::const_iterator  it = this->_lst.begin();
-        std::list<int>::const_iterator  ite = it++;
 
-        if (this->_lst.size() <= 1)
+        if (_vect.size() <= 1)
             throw NoSpanException();
-        this->_lst.sort();
-        int i = this->_lst.front();
-        int j = *ite - i - 1;
-        return (j);
-        
+        std::sort(vect.begin(), vect.end());
+        unsigned int shortest = _vect[1] - _vect[0];
+        for (unsigned int i = 1; i < vect.size(); i++)
+        {
+            dist = vect[i] - vect[i - 1];
+            if (dist < shortest)
+                shortest = dist;
+        }
+        return (shortest);
     }
     catch (const Span::NoSpanException &e)
     {

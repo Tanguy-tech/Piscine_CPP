@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.cpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 11:00:27 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/11 11:48:41 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/22 14:43:29 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,9 @@ void RobotoMyRequestForm::execute(Bureaucrat const &executor) const
         std::cout << RED << e.what() << DEFAULT << std::endl;
         return ;
     }
+}
+
+std::ostream &operator<<(std::ostream &o, const RobotoMyRequestForm &form) {
+	o << BLUE << form.getName() << ",is a form need grade " << form.getSignGrade() << " to be signed and grade " << form.getExecGrade() << " to be executed." <<   DEFAULT;
+	return o;
 }

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 15:30:36 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/04 09:38:46 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/21 10:02:01 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,15 +33,15 @@ ClapTrap::~ClapTrap()
 	std::cout << "ClapTrap " << this->_name << " Destructor called" << std::endl;
 }
 
-void	ClapTrap::displayStatus(void)
-{
-	std::cout << std::endl;
-	std::cout << "Status of " << this->_name << " is now:" << std::endl;
-	std::cout << "Name : " << this->_name << std::endl;
-	std::cout << "HP : " << this->_HitPoints << std::endl;
-	std::cout << "EP : " << this->_EnergyPoints << std::endl;
-	std::cout << "AD : " << this->_AttackDamage << std::endl;
-}
+// void	ClapTrap::displayStatus(void)
+// {
+// 	std::cout << std::endl;
+// 	std::cout << "Status of " << this->_name << " is now:" << std::endl;
+// 	std::cout << "Name : " << this->_name << std::endl;
+// 	std::cout << "HP : " << this->_HitPoints << std::endl;
+// 	std::cout << "EP : " << this->_EnergyPoints << std::endl;
+// 	std::cout << "AD : " << this->_AttackDamage << std::endl;
+// }
 
 std::string	ClapTrap::getName(void) const
 {

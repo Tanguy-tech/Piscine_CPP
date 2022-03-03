@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ShrubberyCreationForm.cpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 08:30:16 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/11 11:25:56 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/22 14:44:03 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,9 @@ void    ShrubberyCreationForm::execute(Bureaucrat const &executor) const
         std::cout << RED << e.what() << DEFAULT << std::endl;
         return ;
     }
+}
+
+std::ostream &operator<<(std::ostream &o, const ShrubberyCreationForm &form) {
+	o << BLUE << form.getName() << ",is a form need grade " << form.getSignGrade() << " to be signed and grade " << form.getExecGrade() << " to be executed." <<   DEFAULT;
+	return o;
 }

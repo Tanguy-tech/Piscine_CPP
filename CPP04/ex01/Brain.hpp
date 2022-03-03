@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 11:42:02 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/04 12:01:08 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/21 14:47:36 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Brain
         ~Brain();
 
     protected:
-        std::string ideas[100];
+        std::string _ideas[100];
 };
 
 #endif

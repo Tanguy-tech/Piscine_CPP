@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 10:25:42 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/04 13:24:43 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/21 15:04:05 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ class Animal
         virtual const std::string &getType() const;
 
     protected:
-        std::string type;
+        std::string _type;
 };
 
 #endif

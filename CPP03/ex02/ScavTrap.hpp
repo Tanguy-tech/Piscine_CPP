@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 13:47:16 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/04 10:13:39 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/21 09:51:25 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class ScavTrap : public ClapTrap
     protected:
         static const unsigned int scav_HP = 100;
         static const unsigned int scav_EP = 50;
-        static const unsigned int scav_AD = 30;
+        static const unsigned int scav_AD = 20;
     
 };
 

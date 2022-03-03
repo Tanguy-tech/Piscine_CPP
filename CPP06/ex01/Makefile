@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+         #
+#    By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/14 11:30:56 by tbillon           #+#    #+#              #
-#    Updated: 2022/02/14 11:32:08 by tbillon          ###   ########.fr        #
+#    Updated: 2022/02/24 13:13:17 by tbillon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ NAME = Serialize
 
 RM	= rm -rf
 
-CC = clang++ -std=c++98
+CC = c++ -std=c++98
 
 FLAGS = -Wall -Werror -Wextra
 

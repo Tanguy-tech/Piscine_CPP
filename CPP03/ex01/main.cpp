@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/31 14:05:50 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/04 10:08:48 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/21 09:43:54 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,26 +21,26 @@ int	main(void)
     std::cout << tang.getName() << " and " << greg.getName() << " are present for this battle!" << std::endl;
     std::cout << tang.getName() << " starts the game! " << std::endl;
     tang.attack(greg.getName());
-    greg.takeDamage(12);
+    greg.takeDamage(20);
     tang.displayStatus();
     tang.guardGate();
     greg.displayStatus();
 
     greg.beRepaired(25);
     greg.attack(tang.getName());
-    tang.takeDamage(13);
+    tang.takeDamage(20);
     tang.displayStatus();
     greg.displayStatus();
     greg.guardGate();
 
     tang.beRepaired(17);
     tang.attack(greg.getName());
-    greg.takeDamage(9);
+    greg.takeDamage(20);
     tang.displayStatus();
     greg.displayStatus();
     
     greg.attack(tang.getName());
-    tang.takeDamage(32);
+    tang.takeDamage(20);
     tang.displayStatus();
     greg.displayStatus();
 

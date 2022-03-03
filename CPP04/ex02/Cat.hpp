@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 10:36:23 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/04 13:36:29 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/21 15:47:52 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "AAnimal.hpp"
 #include "Brain.hpp"
 
-class Cat : public AAnimal
+class Cat : virtual public AAnimal
 {
     public:
         Cat();

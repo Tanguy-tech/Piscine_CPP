@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   DiamondTrap.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 15:43:31 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/04 09:53:07 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/21 10:02:26 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ class DiamondTrap : public FragTrap, public ScavTrap
 
         using ScavTrap::attack;
         void whoAmI();
+
+        void	displayStatus(void);
         
     private:
         std::string _name;

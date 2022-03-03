@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Array.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 08:34:13 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/15 09:09:56 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/24 15:54:51 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ template< typename T>
 class Array
 {
     public:
-        Array<T>() { this->_n = 0; this->_tab = NULL; }
-        Array<T>(unsigned int n)
+        Array<T>() { this->_n = 0; this->_tab = NULL; } /* construction sans parametre qui crée un array vide */
+        Array<T>(unsigned int n) /* Construction avec un paramètre de type unsigned int n : crée un array de n éléments initialisés par défaut. */
         {
             if (n > 0)
             {
@@ -41,7 +41,13 @@ class Array
             else
                 std::cout << YELLOW << TAB_SIZE << DEFAULT << std::endl;
         }
-        Array<T>(const Array &cpy) { *this = cpy; }
+        Array<T>(const Array &cpy) 
+        { 
+            this->_n = cpy._n; 
+            this->_tab = new T[this->_n];
+            for (unsigned int i = 0; i < cpy._n; i++)
+                    _tab[i] = cpy._tab[i];
+        }
         Array &operator=(const Array &rhs)
         {
             if (this != &rhs)

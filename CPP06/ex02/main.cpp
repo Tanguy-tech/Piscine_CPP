@@ -3,14 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 13:52:26 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/14 14:15:46 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/24 13:12:08 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <time.h>
+#include <stdlib.h>
 #define RED "\033[31m"
 #define DEFAULT "\033[0m"
 #define GREEN "\033[32m"
@@ -22,7 +24,8 @@ class C : public Base {};
 
 Base *generate()
 {
-   int  random = rand() % 3;
+   srand(time(NULL)); /* initialize random seed for rand function */
+   int  random = rand() % 3; /* random number between 0 and 2 */
    if (random == 0)
         return new A;
    else if (random == 1)
@@ -91,7 +94,6 @@ void identify(Base &p)
 
 int main()
 {
-    srand(time(NULL));
     Base *test = generate();
 
     identify(test);

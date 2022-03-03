@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 14:56:03 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/14 15:05:18 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/24 15:47:38 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void iter(IT *array, int len, void (*f)(IT const &))
         (*f)(array[i]);
 }
 
+
+/* fo nction template instanciée pour l'exercice, cette fonction est utilisée sur chaque elements du tableau */
 template< typename T >
 void display(T const &x)
 {

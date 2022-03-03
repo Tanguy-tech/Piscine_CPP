@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 11:30:43 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/14 11:33:23 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/24 13:01:53 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@ struct Data {
 };
 
 uintptr_t serialize(Data* ptr) {
-    return (reinterpret_cast<uintptr_t>(ptr));
+    return (reinterpret_cast<uintptr_t>(ptr)); /* Convertis vers type d'entier non signé uintptr_t */
 }
 
 Data* deserialize(uintptr_t raw) {
-    return (reinterpret_cast<Data*>(raw));
+    return (reinterpret_cast<Data*>(raw)); /* Convertis en pointeur dur data */
 }
 
 int main(void) {

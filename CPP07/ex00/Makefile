@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+         #
+#    By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/14 14:23:11 by tbillon           #+#    #+#              #
-#    Updated: 2022/02/14 14:24:08 by tbillon          ###   ########.fr        #
+#    Updated: 2022/02/24 15:36:24 by tbillon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ NAME = Whatever
 
 RM	= rm -rf
 
-CC = clang++ -std=c++98
+CC = c++ -std=c++98
 
 FLAGS = -Wall -Werror -Wextra
 

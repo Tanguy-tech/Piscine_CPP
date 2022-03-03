@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+         #
+#    By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/10 10:18:04 by tbillon           #+#    #+#              #
-#    Updated: 2022/02/11 14:28:57 by tbillon          ###   ########.fr        #
+#    Updated: 2022/02/22 14:50:30 by tbillon          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,7 @@ clean:
 
 fclean:	clean
 		@$(RM) Intern
+		@$(RM) test_shrubbery
 		@printf "$(ERASE)$(RED)-> Executable cleaned$(END)\n"
 
 re: fclean all

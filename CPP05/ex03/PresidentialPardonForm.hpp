@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/11 11:49:35 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/11 14:01:30 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/22 14:43:12 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,7 @@ class PresidentialPardonForm : public Form
         PresidentialPardonForm& operator=(const PresidentialPardonForm &rhs);
         std::string const _target;
 };
+
+std::ostream & operator<<(std::ostream & o, PresidentialPardonForm const & form);
 
 #endif

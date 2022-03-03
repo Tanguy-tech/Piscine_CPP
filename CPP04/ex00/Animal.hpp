@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 10:25:42 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/04 11:28:27 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/21 14:43:54 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,22 @@ class Animal
         Animal();
         Animal(const Animal &cpy);
         Animal & operator=(Animal const &rhs);
-        ~Animal();
+        virtual ~Animal();
 
         virtual void makeSound() const;
         virtual const std::string &getType() const;
 
     protected:
-        std::string type;
+        std::string _type;
+};
+
+class WrongAnimal
+{
+    public:
+        WrongAnimal();
+        virtual ~WrongAnimal();
+
+        void makeSound() const;
 };
 
 #endif

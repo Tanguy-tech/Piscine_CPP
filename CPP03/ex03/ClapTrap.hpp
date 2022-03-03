@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 15:30:18 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/03 17:16:04 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/21 10:01:55 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ class ClapTrap
 
         std::string getName(void) const;
 
-        void displayStatus(void);
+        // void displayStatus(void);
 
     protected:
         std::string _name;

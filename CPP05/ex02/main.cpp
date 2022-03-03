@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 10:18:39 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/11 14:04:47 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/22 14:37:00 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,6 +114,13 @@ int main(void)
     /* pardon.execute(jeanmarc); no need to write this this time as the bureacurat got the memeber function to execute the form  */
     jeanmarc.executeForm(pardon);
     std::cout << std::endl;
+    std::cout << std::endl;
+
+    std::cout << pardon << std::endl;
+    std::cout << robot << std::endl;
+    std::cout << shru << std::endl;
+    std::cout << bernard << std::endl;
+    std::cout << jeanmarc << std::endl;
     std::cout << std::endl;
 
     return 0;

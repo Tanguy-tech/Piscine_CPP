@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/04 10:25:42 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/07 11:05:58 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/21 15:11:41 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,18 +19,17 @@
 class AAnimal
 {
     public:
+        AAnimal();
+        AAnimal(const AAnimal &cpy);
         AAnimal & operator=(AAnimal const &rhs);
         virtual ~AAnimal();
 
-        virtual void makeSound() const;
+        virtual void makeSound() const = 0;
         virtual const std::string &getType() const;
 
     protected:
-        std::string type;
+        std::string _type;
 
-    private:
-        AAnimal();
-        AAnimal(const AAnimal &cpy);
 };
 
 #endif

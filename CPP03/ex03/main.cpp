@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 08:34:20 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/03 17:29:02 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/21 09:59:49 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main(void)
     greg.whoAmI();
     std::cout << tang.getName() << " starts the game! " << std::endl;
     tang.attack(greg.getName());
-    greg.takeDamage(12);
+    greg.takeDamage(30);
     tang.displayStatus();
     tang.highFivesGuys();
     greg.displayStatus();
@@ -29,7 +29,7 @@ int main(void)
 
     greg.beRepaired(25);
     greg.attack(tang.getName());
-    tang.takeDamage(13);
+    tang.takeDamage(30);
     tang.displayStatus();
     tang.highFivesGuys();
     greg.displayStatus();
@@ -37,14 +37,14 @@ int main(void)
 
     tang.beRepaired(17);
     tang.attack(greg.getName());
-    greg.takeDamage(9);
+    greg.takeDamage(30);
     tang.displayStatus();
     tang.highFivesGuys();
     greg.displayStatus();
     greg.highFivesGuys();
     
     greg.attack(tang.getName());
-    tang.takeDamage(32);
+    tang.takeDamage(30);
     tang.displayStatus();
     tang.highFivesGuys();
     greg.displayStatus();

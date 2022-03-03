@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Form.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/10 15:04:06 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/11 08:46:46 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/22 14:30:18 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,4 +100,9 @@ void Form::beSigned(Bureaucrat &bur)
         std::cout << YELLOW << this->_name << " cannot be signed by a bureaucrat under grade " << this->_sign_grade << ". ";
         std::cout << RED << e.what() << DEFAULT << std::endl;
     }
+}
+
+std::ostream &operator<<(std::ostream &o, const Form &form) {
+	o << BLUE << form.getName() << ", form, need grade " << form.getSignGrade() << " to be signed and grade " << form.getExecGrade() << " to be executed." <<   DEFAULT;
+	return o;
 }

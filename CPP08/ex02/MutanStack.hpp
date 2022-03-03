@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MutanStack.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tbillon <tbillon@student.42lyon.fr>        +#+  +:+       +#+        */
+/*   By: tbillon <tbillon@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 15:27:54 by tbillon           #+#    #+#             */
-/*   Updated: 2022/02/17 15:31:41 by tbillon          ###   ########.fr       */
+/*   Updated: 2022/02/25 15:58:28 by tbillon          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,13 @@ class MutantStack : public std::stack<T>
 		typedef typename std::stack<T>::container_type::const_reverse_iterator	const_reverse_iterator;
 
         iterator begin() { return std::stack<T>::c.begin(); }
-		const_iterator begin() const { return std::stack<T>::c.cbegin(); }
+		const_iterator cbegin() const { return std::stack<T>::c.cbegin(); }
 		iterator end() { return std::stack<T>::c.end(); }
-		const_iterator end() const { return std::stack<T>::c.cend(); }
+		const_iterator cend() const { return std::stack<T>::c.cend(); }
 		reverse_iterator rbegin() { return std::stack<T>::c.rbegin(); }
-		const_reverse_iterator rbegin() const { return std::stack<T>::c.crbegin(); }
+		const_reverse_iterator crbegin() const { return std::stack<T>::c.crbegin(); }
 		reverse_iterator rend() { return std::stack<T>::c.rend(); }
-		const_reverse_iterator rend() const { return std::stack<T>::c.crend(); }
+		const_reverse_iterator crend() const { return std::stack<T>::c.crend(); }
 };
 
 #endif
